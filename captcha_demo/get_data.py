@@ -2,8 +2,10 @@
 
 from captcha.image import ImageCaptcha
 import random
+import os
 
 def get_random_char(char_list, num=4):
+    
     char_list_k = random.choices(char_list, k=num)
     char = ''
     for tmp in char_list_k:
@@ -11,6 +13,9 @@ def get_random_char(char_list, num=4):
     return char
 
 def get_captcha(char, file_path='./data'):
+    
+    if not os.path.exists(file_path):
+        os.mkdir(file_path)
     image = ImageCaptcha()
     image.write(char, './data/{}.png'.format(char))
     
