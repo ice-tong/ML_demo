@@ -4,4 +4,4 @@
 2. `input_data.py` 为将二进制文件转换为nmpy数组，显示数据图片。
 3. `easy_demo.py` 为简单的softmax分类模型
 
-
+![avatar](./src/1.png)
