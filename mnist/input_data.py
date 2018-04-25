@@ -8,6 +8,7 @@ Created on Mon Apr 23 22:09:56 2018
 import struct
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 
 def read_images(file_path):
     
@@ -27,12 +28,21 @@ def read_labels(file_path):
     for k, item in enumerate(labels):
         re_labels[k, item] = 1
     return re_labels
+
+def ShowImg(img, height=28, width=28):
+    
+    img = np.reshape(img, [height, width])
+    plt.imshow(img)
     
 def read_data():
+
     '''
-    
+    return:
+        data: 
+            data.keys(): train_images, train_labels, t10k_images, t10k_labels
+                train_images, t10k_images: [num, cols*rows]
+                train_labels, t10k_labels: [num, 10]
     '''
-    
     data_dir = './data'
     data = {}
     
@@ -52,3 +62,6 @@ def read_data():
 if __name__=="__main__":
     
     data = read_data()
+    
+    ShowImg(data['train_images'][0])
+    print(data['train_labels'][0])
