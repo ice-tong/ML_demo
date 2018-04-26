@@ -29,10 +29,17 @@ def read_labels(file_path):
         re_labels[k, item] = 1
     return re_labels
 
-def ShowImg(img, height=28, width=28):
+def show_img(img, height=28, width=28):
     
     img = np.reshape(img, [height, width])
     plt.imshow(img)
+    
+def get_label(vec):
+    
+    for k, i in enumerate(vec):
+        if i:
+            return k
+    return None
     
 def read_data():
 
@@ -63,5 +70,5 @@ if __name__=="__main__":
     
     data = read_data()
     
-    ShowImg(data['train_images'][0])
+    show_img(data['train_images'][0])
     print(data['train_labels'][0])
