@@ -76,5 +76,5 @@ def get_pre_acc(num=100):
 
 if __name__=="__main__":
 
-#    main()
-    get_pre_acc()
+    main()
+#    get_pre_acc()
