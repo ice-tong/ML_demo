@@ -4,4 +4,5 @@
   * 数据集下载： [trec06c](https://plg.uwaterloo.ca/~gvcormac/treccorpus06/)，下载`The TREC 2006 Chinese Public Corpus -- 60MB (trec06c.tgz)`。
   * 将数据集解压到项目目录下，运行`PreData(SPAM).py`，预处理数据。
   * 运行 `NB(SPAM).py`
+  * 项目结构： ![](display.png)
   
